@@ -1,7 +1,6 @@
 ' Copyright © "NAITEL Proveedor de Tecnología y Redes S DE RL DE CV" 2024
 ' Esta macro está diseñada para cambiar los estilos de encabezado en informes de Ekahau.
 
-Attribute VB_Name = "Module1"
 Sub ConvertToHeadings()
     Dim para As Paragraph
     Dim headerText As String
