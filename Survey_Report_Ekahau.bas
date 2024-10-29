@@ -1,3 +1,6 @@
+' Copyright ¬© "NAITEL Proveedor de Tecnolog√≠a y Redes S DE RL DE CV" 2024
+' Esta macro est√° dise√±ada para cambiar los estilos de encabezado en informes de Ekahau.
+
 Attribute VB_Name = "Module1"
 Sub ConvertToHeadings()
     Dim para As Paragraph
@@ -28,9 +31,9 @@ Sub ConvertToHeadings()
         For Each Prefix In h2Patterns
             If InStr(headerText, Prefix) = 1 Then
                 On Error Resume Next
-                para.Style = ActiveDocument.Styles("TÌtulo 2")
+                para.Style = ActiveDocument.Styles("T√≠tulo 2")
                 If Err.Number <> 0 Then
-                    MsgBox "The style 'TÌtulo 2' does not exist."
+                    MsgBox "The style 'T√≠tulo 2' does not exist."
                     Err.Clear
                 End If
                 On Error GoTo 0
@@ -43,9 +46,9 @@ Sub ConvertToHeadings()
         For Each Prefix In h3Patterns
             If InStr(headerText, Prefix) = 1 Then
                 On Error Resume Next
-                para.Style = ActiveDocument.Styles("TÌtulo 3")
+                para.Style = ActiveDocument.Styles("T√≠tulo 3")
                 If Err.Number <> 0 Then
-                    MsgBox "The style 'TÌtulo 3' does not exist."
+                    MsgBox "The style 'T√≠tulo 3' does not exist."
                     Err.Clear
                 End If
                 On Error GoTo 0
@@ -55,7 +58,7 @@ Sub ConvertToHeadings()
         Next Prefix
     Next para
     
-    MsgBox countH2 & " headings changed to TÌtulo 2, " & countH3 & " headings changed to TÌtulo 3."
+    MsgBox countH2 & " headings changed to T√≠tulo 2, " & countH3 & " headings changed to T√≠tulo 3."
 End Sub
 
 
